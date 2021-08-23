@@ -1,2 +1,2 @@
-# title
-link to wiki
+# savecdrs
+http://wiki.innovaphone.com/index.php?title=Howto:Is_there_any_example_code_or_simple_scripts/programs_in_order_to_put_call-information_into_an_MySQL_(or_similiar)_database_in_order_to_build_CRM-alike_solutions_towards_the_MySQL_DB%3F
