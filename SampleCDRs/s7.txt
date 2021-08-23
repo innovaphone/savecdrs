@@ -1,0 +1,394 @@
+    event A:Call
+    time 2022
+    ref 0864575ae909d311b89e009033060014
+    src_cgpn 070317300932
+    date 19700101-003342
+    dir in
+    src_if TEL1
+    srv_id 00-90-33-06-00-14
+    src_cdpn 44
+    bcaps 03_80_90_a3
+end
+    event B:Call
+    time 2022
+    ref 0864575ae909d311b89e009033060014
+    src_cgpn 070317300932
+    date 19700101-003342
+    dir out
+    src_if TEL1
+    srv_id 00-90-33-06-00-14
+    dst_if GW1
+    src_cdpn 44
+    dst_cgpn 070317300932
+    dst_cdpn 44
+    bcaps 03_80_90_a3
+end
+    event B:Alert
+    time 2022
+    ref 0864575ae909d311b89e009033060014
+    src_cgpn 070317300932
+    date 19700101-003342
+    dir out
+    src_if TEL1
+    srv_id 00-90-33-06-00-14
+    dst_if GW1
+    src_cdpn 44
+    dst_cgpn 070317300932
+    dst_cdpn 44
+    bcaps 03_80_90_a3
+end
+    event Media
+    time 2024
+    ref 0864575ae909d311b89e009033060014
+    src_cgpn 070317300932
+    date 19700101-003344
+    src_if TEL1
+    alert_time 2022
+    srv_id 00-90-33-06-00-14
+    dst_if GW1
+    src_cdpn 44
+    xcoder G711u,20(0,0)
+    dst_cgpn 070317300932
+    rcoder G711u,0(0,0)
+    dst_cdpn 44
+    bcaps 03_80_90_a3
+    xstats 0 0 0 0 0
+    rstats 0 0 0 0 0
+end
+    event B:Connect
+    time 2024
+    ref 0864575ae909d311b89e009033060014
+    src_cgpn 070317300932
+    date 19700101-003344
+    dir out
+    src_if TEL1
+    alert_time 2022
+    srv_id 00-90-33-06-00-14
+    dst_if GW1
+    src_cdpn 44
+    xcoder G711u,20(0,0)
+    dst_cgpn 070317300932
+    rcoder G711u,0(0,0)
+    dst_cdpn 44
+    bcaps 03_80_90_a3
+    xstats 0 0 0 0 0
+    rstats 0 0 0 0 0
+end
+    event Media
+    time 2025
+    ref 0864575ae909d311b89e009033060014
+    src_cgpn 070317300932
+    date 19700101-003345
+    src_if TEL1
+    alert_time 2022
+    srv_id 00-90-33-06-00-14
+    dst_if GW1
+    src_cdpn 44
+    xcoder G711u,20(0,0)
+    dst_cgpn 070317300932
+    rcoder G729,100(0,0)
+    dst_cdpn 44
+    bcaps 03_80_90_a3
+    xstats 0 0 0 0 0
+    rstats 0 0 0 0 0
+    connect_time 2024
+end
+    event A:Call
+    time 2031
+    ref 0d5bbcbfe909d311a8d6009033031089
+    src_cgpn 44
+    date 19700101-003351
+    dir in
+    src_if GW1
+    srv_id 00-90-33-06-00-14
+    src_name i1
+    src_reg_name Amt
+    bcaps 03_80_90_a3
+end
+    event B:Call
+    time 2031
+    ref 0d5bbcbfe909d311a8d6009033031089
+    src_cgpn 44
+    date 19700101-003351
+    dir out
+    src_if GW1
+    srv_id 00-90-33-06-00-14
+    dst_if TEL1
+    src_reg_name Amt
+    src_name i1
+    dst_cdpn 
+    dst_cgpn 44
+    bcaps 03_80_90_a3
+end
+    event B:Proceed
+    time 2034
+    ref 0d5bbcbfe909d311a8d6009033031089
+    src_cgpn 44
+    date 19700101-003354
+    dir out
+    src_if GW1
+    srv_id 00-90-33-06-00-14
+    dst_if TEL1
+    src_reg_name Amt
+    src_cdpn 07033529969
+    src_name i1
+    dst_cdpn 07033529969
+    dst_cgpn 44
+    bcaps 03_80_90_a3
+end
+    event Media
+    time 2034
+    ref 0d5bbcbfe909d311a8d6009033031089
+    src_cgpn 44
+    date 19700101-003354
+    src_if GW1
+    srv_id 00-90-33-06-00-14
+    dst_if TEL1
+    src_reg_name Amt
+    src_cdpn 07033529969
+    xcoder G711u,0(0,0)
+    src_name i1
+    dst_cdpn 07033529969
+    dst_cgpn 44
+    rcoder G711u,60(0,0)
+    bcaps 03_80_90_a3
+    xstats 0 0 0 0 0
+    rstats 0 0 0 0 0
+end
+    event B:Alert
+    time 2034
+    ref 0d5bbcbfe909d311a8d6009033031089
+    src_cgpn 44
+    date 19700101-003354
+    dir out
+    src_if GW1
+    srv_id 00-90-33-06-00-14
+    dst_if TEL1
+    src_reg_name Amt
+    src_cdpn 07033529969
+    xcoder G711u,0(0,0)
+    src_name i1
+    dst_cdpn 07033529969
+    dst_cgpn 44
+    rcoder G711u,60(0,0)
+    bcaps 03_80_90_a3
+    xstats 0 0 0 0 0
+    rstats 0 0 0 0 0
+end
+    event B:Connect
+    time 2037
+    ref 0d5bbcbfe909d311a8d6009033031089
+    src_cgpn 44
+    date 19700101-003357
+    dir out
+    src_if GW1
+    alert_time 2034
+    srv_id 00-90-33-06-00-14
+    dst_if TEL1
+    src_reg_name Amt
+    src_cdpn 07033529969
+    xcoder G711u,60(0,0)
+    src_name i1
+    dst_cdpn 07033529969
+    dst_cgpn 44
+    rcoder G711u,60(0,0)
+    bcaps 03_80_90_a3
+    xstats 0 0 0 0 0
+    rstats 0 0 0 0 0
+end
+    event B:X
+    time 2041
+    ref 0864575ae909d311b89e009033060014
+    src_cgpn 070317300932
+    date 19700101-003401
+    dir out
+    src_if TEL1
+    alert_time 2022
+    srv_id 00-90-33-06-00-14
+    dst_if GW1
+    src_cdpn 44
+    xcoder G711u,20(0,0)
+    dst_cgpn 070317300932
+    rcoder G729,100(0,0)
+    dst_cdpn 44
+    bcaps 03_80_90_a3
+    xstats 0 0 0 0 0
+    rstats 0 0 0 0 0
+    disc_time 2041
+    connect_time 2024
+end
+    event A:X
+    time 2041
+    ref 0d5bbcbfe909d311a8d6009033031089
+    src_cgpn 44
+    date 19700101-003401
+    dir in
+    src_if GW1
+    alert_time 2034
+    srv_id 00-90-33-06-00-14
+    dst_if TEL1
+    src_reg_name Amt
+    src_cdpn 07033529969
+    xcoder G711u,60(0,0)
+    src_name i1
+    dst_cdpn 07033529969
+    dst_cgpn 44
+    rcoder G711u,60(0,0)
+    bcaps 03_80_90_a3
+    xstats 0 0 0 0 0
+    rstats 0 0 0 0 0
+    disc_time 2041
+    connect_time 2037
+end
+    event Media
+    time 2041
+    ref 0864575ae909d311b89e009033060014
+    src_cgpn 070317300932
+    date 19700101-003401
+    src_if TEL1
+    alert_time 2022
+    srv_id 00-90-33-06-00-14
+    dst_if GW1
+    src_cdpn 44
+    xcoder G711u,20(3,0)
+    dst_cgpn 070317300932
+    rcoder G711u,20(0,0)
+    dst_cdpn 007033529969
+    bcaps 03_80_90_a3
+    xstats 3 3 0 0 0
+    rstats 0 0 0 0 0
+    connect_time 2041
+end
+    event B:Disc
+    time 2046
+    ref 0d5bbcbfe909d311a8d6009033031089
+    src_cgpn 0070317300932
+    date 19700101-003406
+    dir out
+    src_if GW1
+    alert_time 2034
+    srv_id 00-90-33-06-00-14
+    dst_if TEL1
+    src_reg_name Amt
+    cause 02_80_90
+    src_cdpn 07033529969
+    xcoder G711u,20(0,0)
+    dst_cgpn 44
+    rcoder G711u,20(0,0)
+    dst_cdpn 07033529969
+    bcaps 03_80_90_a3
+    xstats 0 0 0 0 0
+    rstats 0 0 0 0 0
+    connect_time 2041
+end
+    event A:Rel
+    time 2046
+    ref 0d5bbcbfe909d311a8d6009033031089
+    src_cgpn 0070317300932
+    date 19700101-003406
+    dir in
+    src_if GW1
+    alert_time 2034
+    srv_id 00-90-33-06-00-14
+    dst_if TEL1
+    src_reg_name Amt
+    cause 02_80_90
+    src_cdpn 07033529969
+    xcoder G711u,20(0,0)
+    dst_cgpn 44
+    rcoder G711u,20(0,0)
+    dst_cdpn 07033529969
+    bcaps 03_80_90_a3
+    xstats 0 0 0 0 0
+    rstats 0 0 0 0 0
+    disc_time 2046
+    connect_time 2041
+end
+    event B:Disc
+    time 2046
+    ref 0864575ae909d311b89e009033060014
+    src_cgpn 070317300932
+    date 19700101-003406
+    dir out
+    src_if TEL1
+    alert_time 2022
+    srv_id 00-90-33-06-00-14
+    dst_if GW1
+    cause 02_80_90
+    src_cdpn 44
+    xcoder G711u,20(0,0)
+    dst_cgpn 070317300932
+    rcoder G711u,20(0,0)
+    dst_cdpn 007033529969
+    bcaps 03_80_90_a3
+    xstats 0 0 0 0 0
+    rstats 0 0 0 0 0
+    connect_time 2041
+end
+    event B:Rel
+    time 2046
+    ref 0d5bbcbfe909d311a8d6009033031089
+    src_cgpn 0070317300932
+    date 19700101-003406
+    dir out
+    src_if GW1
+    alert_time 2034
+    srv_id 00-90-33-06-00-14
+    dst_if TEL1
+    src_reg_name Amt
+    cause 02_80_90
+    src_cdpn 07033529969
+    xcoder G711u,20(0,0)
+    dst_cgpn 44
+    rcoder G711u,20(0,0)
+    dst_cdpn 07033529969
+    bcaps 03_80_90_a3
+    xstats 0 0 0 0 0
+    rstats 0 0 0 0 0
+    disc_time 2046
+    connect_time 2041
+end
+    event A:Rel
+    time 2048
+    ref 0864575ae909d311b89e009033060014
+    src_cgpn 070317300932
+    date 19700101-003408
+    dir in
+    src_if TEL1
+    alert_time 2022
+    srv_id 00-90-33-06-00-14
+    dst_if GW1
+    cause 02_80_90
+    src_cdpn 44
+    xcoder G711u,20(0,0)
+    dst_cgpn 070317300932
+    rcoder G711u,20(0,0)
+    dst_cdpn 007033529969
+    bcaps 03_80_90_a3
+    xstats 0 0 0 0 0
+    rstats 0 0 0 0 0
+    disc_time 2046
+    connect_time 2041
+end
+    event B:Rel
+    time 2048
+    ref 0864575ae909d311b89e009033060014
+    src_cgpn 070317300932
+    date 19700101-003408
+    dir out
+    src_if TEL1
+    alert_time 2022
+    srv_id 00-90-33-06-00-14
+    dst_if GW1
+    cause 02_80_90
+    src_cdpn 44
+    xcoder G711u,20(0,0)
+    dst_cgpn 070317300932
+    rcoder G711u,20(0,0)
+    dst_cdpn 007033529969
+    bcaps 03_80_90_a3
+    xstats 0 0 0 0 0
+    rstats 0 0 0 0 0
+    disc_time 2046
+    connect_time 2041
+end

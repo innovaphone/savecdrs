@@ -1,0 +1,162 @@
+    event A:Call
+    time 1754
+    ref 29448549e909d311b89e009033060014
+    src_cgpn 070317300932
+    date 19700101-002914
+    dir in
+    src_if TEL1
+    srv_id 00-90-33-06-00-14
+    src_cdpn 44
+    bcaps 03_80_90_a3
+end
+    event B:Call
+    time 1754
+    ref 29448549e909d311b89e009033060014
+    src_cgpn 070317300932
+    date 19700101-002914
+    dir out
+    src_if TEL1
+    srv_id 00-90-33-06-00-14
+    dst_if GW1
+    src_cdpn 44
+    dst_cgpn 070317300932
+    dst_cdpn 44
+    bcaps 03_80_90_a3
+end
+    event B:Alert
+    time 1754
+    ref 29448549e909d311b89e009033060014
+    src_cgpn 070317300932
+    date 19700101-002914
+    dir out
+    src_if TEL1
+    srv_id 00-90-33-06-00-14
+    dst_if GW1
+    src_cdpn 44
+    dst_cgpn 070317300932
+    dst_cdpn 44
+    bcaps 03_80_90_a3
+end
+    event Media
+    time 1755
+    ref 29448549e909d311b89e009033060014
+    src_cgpn 070317300932
+    date 19700101-002915
+    src_if TEL1
+    alert_time 1754
+    srv_id 00-90-33-06-00-14
+    dst_if GW1
+    src_cdpn 44
+    xcoder G711u,20(0,0)
+    dst_cgpn 070317300932
+    rcoder G711u,0(0,0)
+    dst_cdpn 44
+    bcaps 03_80_90_a3
+    xstats 0 0 0 0 0
+    rstats 0 0 0 0 0
+end
+    event B:Connect
+    time 1755
+    ref 29448549e909d311b89e009033060014
+    src_cgpn 070317300932
+    date 19700101-002915
+    dir out
+    src_if TEL1
+    alert_time 1754
+    srv_id 00-90-33-06-00-14
+    dst_if GW1
+    src_cdpn 44
+    xcoder G711u,20(0,0)
+    dst_cgpn 070317300932
+    rcoder G711u,0(0,0)
+    dst_cdpn 44
+    bcaps 03_80_90_a3
+    xstats 0 0 0 0 0
+    rstats 0 0 0 0 0
+end
+    event B:X
+    time 1759
+    ref 29448549e909d311b89e009033060014
+    src_cgpn 070317300932
+    date 19700101-002919
+    dir out
+    src_if TEL1
+    alert_time 1754
+    srv_id 00-90-33-06-00-14
+    dst_if GW1
+    src_cdpn 44
+    xcoder G711u,20(0,0)
+    dst_cgpn 070317300932
+    rcoder G711u,0(0,0)
+    dst_cdpn 44
+    bcaps 03_80_90_a3
+    xstats 0 0 0 0 0
+    rstats 0 0 0 0 0
+    disc_time 1759
+    connect_time 1755
+end
+    event A:Disc
+    time 1768
+    ref 29448549e909d311b89e009033060014
+    src_cgpn 070317300932
+    date 19700101-002928
+    dir in
+    src_if TEL1
+    alert_time 1754
+    srv_id 00-90-33-06-00-14
+    dst_if GW1
+    cause 02_80_90
+    src_cdpn 44
+    xcoder G711u,20(0,0)
+    dst_cgpn 070317300932
+    rcoder G711u,60s(0,0)
+    dst_cdpn 55
+    bcaps 03_80_90_a3
+    xstats 0 0 0 0 0
+    rstats 0 0 0 0 0
+    connect_time 1759
+end
+    event B:Rel
+    time 1768
+    ref 29448549e909d311b89e009033060014
+    src_cgpn 070317300932
+    date 19700101-002928
+    dir out
+    src_if TEL1
+    alert_time 1754
+    srv_id 00-90-33-06-00-14
+    dst_if GW1
+    cause 02_80_90
+    src_cdpn 44
+    xcoder G711u,20(0,0)
+    dst_cgpn 070317300932
+    rcoder G711u,60s(0,0)
+    dst_cdpn 55
+    bcaps 03_80_90_a3
+    xstats 0 0 0 0 0
+    rstats 0 0 0 0 0
+    disc_time 1768
+    connect_time 1759
+end
+    event A:Rel
+    time 1768
+    ref 29448549e909d311b89e009033060014
+    src_cgpn 070317300932
+    date 19700101-002928
+    dir in
+    src_if TEL1
+    alert_time 1754
+    srv_id 00-90-33-06-00-14
+    dst_if GW1
+    cause 02_80_90
+    src_cdpn 44
+    xcoder G711u,20(0,0)
+    dst_cgpn 070317300932
+    rcoder G711u,60s(0,0)
+    dst_cdpn 55
+    bcaps 03_80_90_a3
+    xstats 0 0 0 0 0
+    rstats 0 0 0 0 0
+    disc_time 1768
+    connect_time 1759
+end

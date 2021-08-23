@@ -1,0 +1,69 @@
+<SCRIPT LANGUAGE=VBScript RUNAT=Server>
+
+'You can add special event handlers in this file that will get run automatically when
+'special Active Server Pages events occur. To create these handlers, just create a
+'subroutine with a name from the list below that corresponds to the event you want to
+'use. For example, to create an event handler for Session_OnStart, you would put the
+'following code into this file (without the comments):
+
+'Sub Session_OnStart
+'**Put your code here **
+'End Sub
+
+'EventName              Description
+'Session_OnStart        Runs the first time a user runs any page in your application
+'Session_OnEnd          Runs when a user's session times out or quits your application
+'Application_OnStart    Runs once when the first page of your application is run for the first time by any user
+'Application_OnEnd      Runs once when the web server shuts down
+
+function align2(v)
+
+   if (v < 10) then
+       align2 = "0" & v
+   else
+       align2 = "" & v
+   end if
+
+end function
+
+Sub Session_OnStart
+
+   ' set application specific parameter
+   ' should be in the application object but then you need to restart your web server to change 'em
+   dim basename
+   dim prefix
+   dim suffix
+   dim MyDate
+   dim MyTime
+   dim stamp
+   
+   ' YOU MAY CHANGE BELOW THIS LINE
+   
+   ' the log file name prefix
+   prefix = "cdrlog_"
+   
+   ' the log file name suffix
+   suffix = ".txt"
+   
+   ' where the logfiles are
+   ' if you want them in a hardwired location (not recommended), uncomment next line
+   ' basename = "D:\CDR" & "\" & prefix
+   ' if you want logfiles in the web server tree, uncomment next line
+   basename = Server.MapPath("CDR/" & prefix)
+   
+   ' DO NOT CHANGE ANYTHING BELOW THIS LINE
+   
+   MyDate = Date
+   MyTime = Time()
+   stamp = Year(MyDate) & align2(Month (MyDate)) & align2(Day(MyDate)) 
+   basename = basename & stamp & "_"
+   Session("cdrstamp") = align2(Hour(MyTime)) & align2(Minute(MyTime)) & align2(Second(MyTime))
+   Session("cdrbase") = basename
+   Session("cdrext") = suffix
+   Session("cdrfn") = basename & Request.ServerVariables("REMOTE_HOST") & suffix
+
+End Sub
+
+
+</SCRIPT>
+
